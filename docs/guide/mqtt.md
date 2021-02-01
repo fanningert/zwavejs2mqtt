@@ -114,11 +114,26 @@ I will get this response (in the same topic without the suffix `/set`):
 
 `result` will contain the value returned from the API. In this example I will get an array with all node IDs that are associated to the group 1 (lifeline) of node 23.
 
+#### Execute Scene
+
+In this example I will execute a custom scene with the id `1`.
+
+Topic: `zwave/_CLIENTS/ZWAVE_GATEWAY-office/api/_activateScene/set`
+
+Payload:
+
+```js
+{ "args": [
+    1 // id of scene
+  ]
+}
+```
+
 #### Send Command
 
 Example calling [startLevelChange](https://github.com/zwave-js/node-zwave-js/blob/c695ee81cb2b1d3cf15e3db1cc14b1e41a911cc0/packages/zwave-js/src/lib/commandclass/MultilevelSwitchCC.ts) command:
 
-Topic: `zwavejs/_CLIENTS/ZWAVE_GATEWAY-<yourName>/api/sendCommand/set`
+Topic: `zwave/_CLIENTS/ZWAVE_GATEWAY-office/api/sendCommand/set`
 
 Payload:
 
